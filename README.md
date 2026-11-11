@@ -1,5 +1,7 @@
 # `hilbert-ica`
 
+**English** | [简体中文](README_zh.md)
+
 Minimal, self-contained Python implementation of Yu's **Hilbert-phase Complex ICA** workflow for magnitude-only fMRI, supporting parallel cohort execution and Smith (2009) resting-state network (RSN) component selection.
 
 ## References
