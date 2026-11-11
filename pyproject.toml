@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hilbert-ica"
+version = "0.1.0"
+description = "Parallel Hilbert-phase Complex ICA (EBM) and Smith-2009 RSN selection for fMRI"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "nibabel>=5.0",
+    "nilearn>=0.10",
+    "joblib>=1.3",
+    "threadpoolctl>=3.1",
+    "tqdm>=4.65",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+
+[project.scripts]
+hilbert-ica = "hilbert_ica.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+hilbert_ica = ["ebm_nf_tables.npz"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"

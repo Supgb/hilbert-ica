@@ -1,0 +1,29 @@
+# Byte-compiled / caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Data & experiment outputs
+data/
+outputs/
+*.npz
+!src/hilbert_ica/ebm_nf_tables.npz
+*.nii
+*.nii.gz
+*.tmp
